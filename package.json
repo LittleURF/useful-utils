@@ -1,0 +1,27 @@
+{
+  "name": "@littleurf/useful-utilities",
+  "version": "0.0.1",
+  "description": "A set of utilities for my projects",
+  "homepage": "https://github.com/LittleURF/useful-utils",
+  "bugs": {
+    "url": "https://github.com/LittleURF/useful-utils/issues"
+  },
+  "author": {
+    "name": "Hubert"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LittleURF/useful-utils"
+  },
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "ci": "npm run build"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}
