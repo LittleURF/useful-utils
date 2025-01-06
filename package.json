@@ -1,6 +1,6 @@
 {
   "name": "@littleurf/useful-utilities",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A set of utilities for my projects",
   "homepage": "https://github.com/LittleURF/useful-utils",
   "bugs": {
@@ -16,16 +16,28 @@
   "files": [
     "dist"
   ],
-  "main": "dist/index.js",
   "type": "module",
+  "main": "./dist/umd/index.min.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/umd/index.min.js"
+    }
+  },
   "scripts": {
-    "build": "tsc",
+    "build": "rollup -c",
     "test": "vitest run",
     "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
     "ci": "npm run build && npm run check-exports && npm run test"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.17.2",
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "rollup": "^4.30.0",
+    "rollup-plugin-typescript2": "^0.36.0",
     "typescript": "^5.7.2",
     "vitest": "^2.1.8"
   }
