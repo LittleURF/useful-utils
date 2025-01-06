@@ -22,7 +22,7 @@
     "build": "tsc",
     "test": "vitest run",
     "check-exports": "attw --pack . --ignore-rules=cjs-resolves-to-esm",
-    "ci": "npm run build && attw --pack . npm run check-exports && npm run test"
+    "ci": "npm run build && npm run check-exports && npm run test"
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.17.2",
